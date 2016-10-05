@@ -20,7 +20,7 @@ def tree_path(path, symbol):
     file_end = 0
     children_count = 0
     while children_count < len(sorted_children):
-        children = sorted_childred[children_count]
+        children = sorted_children[children_count]
         if(children_count < (len(sorted_children) - 1)):
             print(symbol + branch + str(children))
         else:
