@@ -16,7 +16,7 @@ directory_count = 0
 def tree_path(path, symbol):
     global directory_count
     global file_count
-    sorted_children =([c for c in os.listdir(path) if not c.startswith('.')], key=lambda s: s.strip('_').lower())
+    sorted_children = sorted([c for c in os.listdir(path) if not c.startswith('.')], key=lambda s: s.strip('_').lower())
     file_end = 0
     children_count = 0
     while children_count < len(sorted_children):
