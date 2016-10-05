@@ -33,4 +33,15 @@ def tree_path(path, symbol):
             else:
                 tree_path(os.path.join(path, children), symbol + indent)
         elif(os.path.isfile(os.path.join(path, children))):
+            file_count = file_count + 1
+        children_count = children_count + 1
+
+if __name__ == '__main__':
+    dir_path = "."
+    if(len(sys.argv) == 2):
+        dir_path = sys.argv[1]
+    print(dir_path)
+    tree_path(dir_path, "")
+    print()
+    print(str(directory_count) + " directories, " + str(file_count) + " files")
 
