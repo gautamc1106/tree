@@ -10,8 +10,9 @@ space = '    '
 branch = '├── '
 end_branch = '└── '
 
-file_count=0
-directory_count=0
+file_count = 0
+directory_count = 0
+
 
 def tree_path(path, symbol):
     global directory_count
@@ -24,9 +25,9 @@ def tree_path(path, symbol):
             print(symbol + branch + str(children))
         else:
             file_end = 1
-            print(symbol + end_branch+ str(children))
+            print(symbol + end_branch + str(children))
         if (os.path.isdir(os.path.join(path, children))):
-            directory_count = directory_count + 1
+            directory_count =  directory_count + 1
             if(file_end == 1):
                 tree_path(os.path.join(path, children), symbol + space)
             else:
